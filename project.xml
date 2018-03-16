@@ -265,15 +265,15 @@
         </source>
 
         <source name="entrez-organism" type="entrez-organism">
-            <property name="src.data.file" location="build/organisms.xml"/>
+            <property name="src.data.file" location="organisms.xml"/>
         </source>
 
         <source name="thalemine-static" type="intermine-items-xml-file">
-            <property name="src.data.file" location="datasets.xml"/>
+            <property name="src.data.file" location="/usr/local/projdata/0611/projects/AIP/ThaleMineData/static/datasets.xml"/>
         </source>
 
         <source name="update-publications" type="update-publications">
-            <property name="src.data.file" location="build/publications.xml"/>
+            <property name="src.data.file" location="publications.xml"/>
         </source>
 
     </sources>
