@@ -1,3 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<!DOCTYPE project [
+
+  <!ENTITY thalemine_data_dir "/usr/local/projdata/0611/projects/AIP/ThaleMineData">
+  <!ENTITY arath_taxon_id "3702">
+
+]>
+
 <project type="bio">
     <property name="target.model" value="genomic"/>
     <property name="common.os.prefix" value="common"/>
@@ -76,13 +85,13 @@
             <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
             <property name="fasta.dataSourceName" value="TAIR"/>
             <property name="fasta.dataSetTitle" value="Genome Assembly"/>
-            <property name="fasta.taxonId" value="3702"/>
+            <property name="fasta.taxonId" value="&arath_taxon_id;"/>
             <property name="fasta.includes" value="*Chr*"/>
-            <property name="src.data.dir" location="/usr/local/projdata/0611/projects/AIP/ThaleMineData/genome/fasta/"/>
+            <property name="src.data.dir" location="&thalemine_data_dir;/genome/fasta/"/>
         </source>
 
         <source name="psi-mi-ontology" type="psi-mi-ontology">
-            <property name="src.data.file" location="/usr/local/projdata/0611/projects/AIP/ThaleMineData/psi/psi-mi.obo"/>
+            <property name="src.data.file" location="&thalemine_data_dir;/psi/psi-mi.obo"/>
         </source>
 
         <source name="so" type="so">
@@ -92,82 +101,82 @@
 <!-- /also those should be rather static-->
 
         <source name="araport-locus-history" type="intermine-items-xml-file">
-            <property name="src.data.file" location="/usr/local/projdata/0611/projects/AIP/ThaleMineData/locushistory/araport-locus-history.xml" />
+            <property name="src.data.file" location="&thalemine_data_dir;/locushistory/araport-locus-history.xml" />
         </source>
 
         <source name="araport-gff" type="araport-gff">
-            <property name="gff3.taxonId" value="3702"/>
+            <property name="gff3.taxonId" value="&arath_taxon_id;"/>
             <property name="gff3.seqDataSourceName" value="TAIR"/>
             <property name="gff3.dataSourceName" value="Araport"/>
             <property name="gff3.seqClsName" value="Chromosome"/>
             <property name="gff3.dataSetTitle" value="Genome Annotation"/>
             <property name="src.data.dir.includes" value="*GFF3*"/>
-            <property name="src.data.dir" location="/usr/local/projdata/0611/projects/AIP/ThaleMineData/genome/gff/" />
+            <property name="src.data.dir" location="&thalemine_data_dir;/genome/gff/" />
         </source>
 
         <source name="salk-tdnaseq-gff" type="salk-tdnaseq-gff">
-            <property name="gff3.taxonId" value="3702"/>
+            <property name="gff3.taxonId" value="&arath_taxon_id;"/>
             <property name="gff3.seqClsName" value="Chromosome"/>
             <property name="gff3.dataSourceName" value="SIGnAL"/>
             <property name="gff3.dataSetTitle" value="TDNA-Seq Insertions data set"/>
-            <property name="src.data.dir" location="/usr/local/projdata/0611/projects/AIP/ThaleMineData/salk-tdnaseq/current" />
+            <property name="src.data.dir" location="&thalemine_data_dir;/salk-tdnaseq/current" />
         </source>
 
 
         <source name="rnaseq-expression" type="rnaseq-expression" dump="true">
-            <property name="src.data.dir" location="/usr/local/projdata/0611/projects/AIP/ThaleMineData/rnaseq_expression/current"/>
+            <property name="src.data.dir" location="&thalemine_data_dir;/rnaseq_expression/current"/>
             <property name="src.data.dir.includes" value="*RNAseq-expression*"/>
-            <property name="rnaseq.organisms" value="3702"/>
+            <property name="rnaseq.organisms" value="&arath_taxon_id;"/>
             <property name="dataSourceName" value="RNASeq"/>
             <property name="dataSetName" value="RNASeq data set"/>
         </source>
 
         <!-- new for release 1.10
         <source name="ensembl-snp" type="ensembl-snp" >
-            <property name="src.data.dir" location="/usr/local/projdata/0611/projects/AIP/ThaleMineData/variation/current" />
+            <property name="src.data.dir" location="&thalemine_data_dir;/variation/current" />
             <property name="ensembl-snp.includes" value="arabidopsis_thaliana.incl_consequences.gvf" />
         </source>
         -->
 
         <source name="pubmed-gene" type="pubmed-gene" >
-            <property name="src.data.dir" location="/usr/local/projdata/0611/projects/AIP/ThaleMineData/pubmed"/>
-            <property name="pubmed.organisms" value="3702"/>
+            <property name="src.data.dir" location="&thalemine_data_dir;/pubmed"/>
+            <property name="pubmed.organisms" value="&arath_taxon_id;"/>
             <property name="src.data.dir.includes" value="gene2pubmed"/>
-            <property name="infoFile" location="/usr/local/projdata/0611/projects/AIP/ThaleMineData/ncbi-gene/gene_info"/>
+            <property name="infoFile" location="&thalemine_data_dir;/ncbi-gene/gene_info"/>
         </source>
 
         <source name="go" type="go">
-            <property name="src.data.file" location="/usr/local/projdata/0611/projects/AIP/ThaleMineData/go/gene_ontology.obo"/>
+            <property name="src.data.file" location="&thalemine_data_dir;/go/gene_ontology.obo"/>
         </source>
 
         <source name="go-annotation" type="go-annotation">
-            <property name="src.data.dir" location="/usr/local/projdata/0611/projects/AIP/ThaleMineData/go_annotation/current/" />
+            <property name="src.data.dir" location="&thalemine_data_dir;/go_annotation/current/" />
             <property name="dataSourceName" value="GO Annotation from TAIR"/>
             <property name="ontologyPrefix" value="GO"/>
         </source>
 
         <source name="po" type="po">
-            <property name="src.data.file" location="/usr/local/projdata/0611/projects/AIP/ThaleMineData/po/plant_ontology.obo"/>
+            <property name="src.data.file" location="&thalemine_data_dir;/po/plant_ontology.obo"/>
         </source>
 
         <source name="po-annotation" type="po-annotation">
-            <property name="src.data.dir" location="/usr/local/projdata/0611/projects/AIP/ThaleMineData/po_annotation/" />
+            <property name="src.data.dir" location="&thalemine_data_dir;/po_annotation/" />
             <property name="dataSourceName" value="PO Annotation from TAIR"/>
             <property name="ontologyPrefix" value="PO"/>
         </source>
 
         <source name="uniprot" type="uniprot">
-            <property name="uniprot.organisms" value="3702"/>
-            <property name="src.data.dir" location="/usr/local/projdata/0611/projects/AIP/ThaleMineData/uniprot/current"/>
+            <property name="uniprot.organisms" value="&arath_taxon_id;"/>
+            <property name="src.data.dir" location="&thalemine_data_dir;/uniprot/current"/>
         </source>
 
         <source name="uniprot-fasta" type="fasta">
-            <property name="fasta.taxonId" value="3702"/>
+            <property name="fasta.taxonId" value="&arath_taxon_id;"/>
             <property name="fasta.className" value="org.intermine.model.bio.Protein"/>
             <property name="fasta.classAttribute" value="primaryAccession"/>
             <property name="fasta.dataSetTitle" value="UniProt FASTA dataset"/>
             <property name="fasta.dataSourceName" value="UniProt"/>
-            <property name="src.data.dir" location="/usr/local/projdata/0611/projects/AIP/ThaleMineData/uniprot/current"/>
+            <property name="src.data.dir" location="&thalemine_data_dir;/uniprot/current"/>
             <property name="fasta.includes" value="uniprot_sprot_varsplic.fasta"/>
             <property name="fasta.sequenceType" value="protein" />
             <property name="fasta.loaderClassName"
@@ -175,87 +184,87 @@
         </source>
 
         <source name="uniprot-keywords" type="uniprot-keywords">
-            <property name="src.data.dir" location="/usr/local/projdata/0611/projects/AIP/ThaleMineData/uniprot/current"/>
+            <property name="src.data.dir" location="&thalemine_data_dir;/uniprot/current"/>
             <property name="src.data.dir.includes" value="keywlist.xml"/>
         </source>
 
         <source name="araport-cds-fasta" type="araport-fasta">
             <property name="fasta.loaderClassName"
                 value="org.intermine.bio.dataconversion.AraportCDSFastaLoaderTask"/>
-            <property name="fasta.taxonId" value="3702"/>
+            <property name="fasta.taxonId" value="&arath_taxon_id;"/>
             <property name="fasta.className" value="org.intermine.model.bio.CDS"/>
             <property name="fasta.classAttribute" value="primaryIdentifier"/>
             <property name="fasta.includes" value="*cds*"/>
             <property name="fasta.dataSetTitle" value="Coding Sequence FASTA"/>
             <property name="fasta.dataSourceName" value="Araport"/>
-            <property name="src.data.dir" location="/usr/local/projdata/0611/projects/AIP/ThaleMineData/genome/fasta/"/>
+            <property name="src.data.dir" location="&thalemine_data_dir;/genome/fasta/"/>
         </source>
 
         <source name="araport-pep-fasta" type="araport-fasta">
             <property name="fasta.loaderClassName"
                 value="org.intermine.bio.dataconversion.AraportProteinFastaLoaderTask"/>
             <property name="fasta.skipIfProteinLoaded" value="true"/>
-            <property name="fasta.taxonId" value="3702"/>
+            <property name="fasta.taxonId" value="&arath_taxon_id;"/>
             <property name="fasta.sequenceType" value="protein"/>
             <property name="fasta.className" value="org.intermine.model.bio.Protein"/>
             <property name="fasta.classAttribute" value="primaryIdentifier"/>
             <property name="fasta.includes" value="*pep*"/>
             <property name="fasta.dataSetTitle" value="Protein Sequence FASTA"/>
             <property name="fasta.dataSourceName" value="Araport"/>
-            <property name="src.data.dir" location="/usr/local/projdata/0611/projects/AIP/ThaleMineData/genome/fasta/"/>
+            <property name="src.data.dir" location="&thalemine_data_dir;/genome/fasta/"/>
         </source>
 
         <source name="panther" type="panther" dump="true">
-            <property name="src.data.dir" location="/usr/local/projdata/0611/projects/AIP/ThaleMineData/orthologs/panther"/>
-            <property name="panther.organisms" value="3702 4932 9606"/>
+            <property name="src.data.dir" location="&thalemine_data_dir;/orthologs/panther"/>
+            <property name="panther.organisms" value="&arath_taxon_id; 4932 9606"/>
         </source>
 
         <source name="interpro" type="interpro">
-            <property name="src.data.dir" location="/usr/local/projdata/0611/projects/AIP/ThaleMineData/interpro/current"/>
+            <property name="src.data.dir" location="&thalemine_data_dir;/interpro/current"/>
             <property name="src.data.dir.includes" value="interpro.xml"/>
         </source>
 
         <source name="protein2ipr" type="protein2ipr">
-            <property name="src.data.dir" location="/usr/local/projdata/0611/projects/AIP/ThaleMineData/interpro/current"/>
+            <property name="src.data.dir" location="&thalemine_data_dir;/interpro/current"/>
             <property name="src.data.dir.includes" value="protein2ipr.dat"/>
-            <property name="protein2ipr.organisms" value="3702"/>
+            <property name="protein2ipr.organisms" value="&arath_taxon_id;"/>
             <property name="osAlias" value="os.production"/>
         </source>
 
         <source name="kegg-pathway" type="kegg-pathway">
-            <property name="src.data.dir" location="/usr/local/projdata/0611/projects/AIP/ThaleMineData/kegg/current"/>
-            <property name="kegg.organisms" value="3702"/>
+            <property name="src.data.dir" location="&thalemine_data_dir;/kegg/current"/>
+            <property name="kegg.organisms" value="&arath_taxon_id;"/>
         </source>
 
         <source name="generif" type="generif">
-            <property name="src.data.dir" location="/usr/local/projdata/0611/projects/AIP/ThaleMineData/generif/current"/>
-            <property name="generif.organisms" value="3702"/>
+            <property name="src.data.dir" location="&thalemine_data_dir;/generif/current"/>
+            <property name="generif.organisms" value="&arath_taxon_id;"/>
             <property name="generif.datasourcename" value="GeneRIF"/>
             <property name="generif.datasetname" value="GeneRIF data set"/>
         </source>
 
     	<!--
         <source name="bar-psi-interactions" type="bar-psi-interactions">
-            <property name="src.data.dir" location="/usr/local/projdata/0611/projects/AIP/ThaleMineData/bar-interactions/current"/>
-            <property name="bar.organisms" value="3702"/>
+            <property name="src.data.dir" location="&thalemine_data_dir;/bar-interactions/current"/>
+            <property name="bar.organisms" value="&arath_taxon_id;"/>
             <property name="dataSourceName" value="BAR"/>
             <property name="dataSetName" value="BAR interactions data set"/>
         </source> -->
 
         <source name="psi-intact" type="psi" >
-          <property name="src.data.dir" location="/usr/local/projdata/0611/projects/AIP/ThaleMineData/psi/intact/current"/>
-          <property name="intact.organisms" value="3702"/>
+          <property name="src.data.dir" location="&thalemine_data_dir;/psi/intact/current"/>
+          <property name="intact.organisms" value="&arath_taxon_id;"/>
         </source>
 
         <source name="biogrid" type="biogrid" dump="true">
-          <property name="src.data.dir" location="/usr/local/projdata/0611/projects/AIP/ThaleMineData/biogrid/current"/>
+          <property name="src.data.dir" location="&thalemine_data_dir;/biogrid/current"/>
           <property name="src.data.dir.includes" value="*Arabidopsis_thaliana*"/>
-          <property name="biogrid.organisms" value="3702"/>
+          <property name="biogrid.organisms" value="&arath_taxon_id;"/>
         </source>
 
         <source name="araport-chado-stock" type="araport-chado-db">
             <property name="source.db.name" value="araport"/>
-            <property name="organisms" value="3702"/>
+            <property name="organisms" value="&arath_taxon_id;"/>
             <property name="dataSourceName" value="TAIR"/>
             <property name="dataSetTitle" value="TAIR Stock"/>
             <property name="processors"
@@ -269,7 +278,7 @@
         </source>
 
         <source name="thalemine-static" type="intermine-items-xml-file">
-            <property name="src.data.file" location="/usr/local/projdata/0611/projects/AIP/ThaleMineData/static/datasets.xml"/>
+            <property name="src.data.file" location="&thalemine_data_dir;/static/datasets.xml"/>
         </source>
 
         <source name="update-publications" type="update-publications">
@@ -284,7 +293,7 @@
         <post-process name="create-gene-flanking-features" />
         <post-process name="do-sources" />
         <post-process name="create-intron-features">
-            <property name="organisms" value="3702"/>
+            <property name="organisms" value="&arath_taxon_id;"/>
         </post-process>
         <post-process name="create-intergenic-region-features"/>
         <post-process name="transfer-sequences"/>
